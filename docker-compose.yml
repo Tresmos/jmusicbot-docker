@@ -1,0 +1,8 @@
+version: '3'
+services:
+  jmusicbot:
+    image: ghcr.io/tresmos/jmusicbot
+    container_name: jmusicbot
+    network_mode: host
+    volumes:
+      - ./data:/opt/jmusicbot/data/
