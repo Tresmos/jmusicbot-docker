@@ -1,6 +1,6 @@
 FROM --platform=$TARGETOS/$TARGETARCH openjdk:18.0.2-slim
 
-ENV BOT_VERSION 0.3.9
+ENV BOT_VERSION 0.4.0
 
 RUN apt-get update -y \
         && apt-get install -y --no-install-recommends curl \
