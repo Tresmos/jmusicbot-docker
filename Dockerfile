@@ -1,12 +1,11 @@
-FROM --platform=$TARGETOS/$TARGETARCH openjdk:18.0.2-slim
+FROM --platform=$TARGETOS/$TARGETARCH alpine:3.19
 
 ENV BOT_VERSION 0.4.0
 
-RUN apt-get update -y \
-        && apt-get install -y --no-install-recommends curl \
-        && rm -rf /var/lib/apt/lists/* \
-        && apt-get autoremove -y \
-        && apt-get clean
+RUN apk update \
+    && apk upgrade \
+    && apk add --update openjdk11 curl \
+    && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /opt/jmusicbot/data/
 
