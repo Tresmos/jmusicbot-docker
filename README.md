@@ -10,7 +10,6 @@ If there is no config.txt file located in the data directory, an example config.
 ### With Docker Compose
 `docker-compose.yml`
 ```yml
-version: '3'
 services:
   jmusicbot:
     image: ghcr.io/tresmos/jmusicbot
