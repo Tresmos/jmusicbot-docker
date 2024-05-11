@@ -1,6 +1,6 @@
 FROM --platform=$TARGETOS/$TARGETARCH alpine:3.19
 
-ENV BOT_VERSION 0.4.0
+ENV BOT_VERSION 0.4.1
 
 RUN apk update \
     && apk upgrade \
